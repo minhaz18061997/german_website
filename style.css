@@ -1,0 +1,185 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Georgia, serif;
+  font-size: 15px;
+  background: #f9f7f4;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ── Nav ─────────────────────────────────────────────────────── */
+nav {
+  background: #1a1a2e;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+nav .site-title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 0;
+  margin-right: 16px;
+  text-decoration: none;
+}
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  padding: 12px 10px;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+}
+nav a:hover, nav a.active { color: #fff; background: #16213e; }
+
+/* ── Page header ─────────────────────────────────────────────── */
+.page-header {
+  background: #16213e;
+  color: #fff;
+  padding: 28px 24px 20px;
+}
+.page-header h1 { font-size: 22px; margin-bottom: 4px; }
+.page-header p  { color: #aaa; font-size: 13px; font-family: Arial, sans-serif; }
+
+/* ── Level tabs ──────────────────────────────────────────────── */
+.level-tabs {
+  display: flex;
+  gap: 6px;
+  padding: 14px 24px;
+  background: #eee;
+  border-bottom: 1px solid #ddd;
+  flex-wrap: wrap;
+}
+.level-tabs a {
+  padding: 6px 16px;
+  border-radius: 3px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+}
+.tab-a1 { background: #d5e8d4; color: #2d6a2d; }
+.tab-a2 { background: #dae8fc; color: #1a5276; }
+.tab-b1 { background: #fff2cc; color: #7d6608; }
+.tab-b2 { background: #ffe6cc; color: #7d3c07; }
+.level-tabs a:hover { opacity: 0.75; }
+
+/* ── Content ─────────────────────────────────────────────────── */
+.content { padding: 20px 24px; }
+
+/* Level section heading */
+.level-heading {
+  padding: 10px 14px;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 28px 0 12px;
+  font-family: Arial, sans-serif;
+}
+.level-heading:first-child { margin-top: 0; }
+.lh-a1 { background: #d5e8d4; color: #2d6a2d; }
+.lh-a2 { background: #dae8fc; color: #1a5276; }
+.lh-b1 { background: #fff2cc; color: #7d6608; }
+.lh-b2 { background: #ffe6cc; color: #7d3c07; }
+
+/* ── Tables ──────────────────────────────────────────────────── */
+.tbl-wrap { overflow-x: auto; margin-bottom: 8px; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+}
+th {
+  background: #1a1a2e;
+  color: #fff;
+  text-align: left;
+  padding: 8px 10px;
+  white-space: nowrap;
+}
+td {
+  padding: 7px 10px;
+  border-bottom: 1px solid #e0e0e0;
+  vertical-align: top;
+}
+tr:nth-child(even) td { background: #f4f4f4; }
+tr:hover td { background: #eef4ff; }
+
+/* ── Cards (for resources) ───────────────────────────────────── */
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; margin-bottom: 8px; }
+.card {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 14px;
+  background: #fff;
+}
+.card h3 { font-size: 14px; margin-bottom: 4px; font-family: Arial, sans-serif; }
+.card .type-badge {
+  display: inline-block;
+  font-size: 11px;
+  padding: 1px 7px;
+  border-radius: 10px;
+  background: #eee;
+  color: #555;
+  margin-bottom: 6px;
+  font-family: Arial, sans-serif;
+}
+.card p { font-size: 13px; color: #444; margin-bottom: 8px; }
+.card .why { font-size: 12px; color: #666; font-style: italic; margin-bottom: 8px; }
+.card a.link-btn {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 12px;
+  background: #1a1a2e;
+  color: #fff;
+  border-radius: 3px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+}
+.card a.link-btn:hover { background: #16213e; }
+.card .freq { font-size: 11px; color: #888; margin-top: 6px; font-family: Arial, sans-serif; }
+
+/* ── Study plan ──────────────────────────────────────────────── */
+.plan-block {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+.plan-block .plan-header {
+  padding: 10px 14px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+.plan-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.plan-col {
+  padding: 12px 14px;
+  font-size: 13px;
+  border-top: 1px solid #ddd;
+}
+.plan-col:nth-child(2) { border-left: 1px solid #ddd; }
+.plan-col h4 { font-size: 12px; font-family: Arial, sans-serif; color: #888; margin-bottom: 6px; text-transform: uppercase; }
+.plan-col ul { padding-left: 16px; }
+.plan-col li { margin-bottom: 3px; }
+
+/* ── Guide page ──────────────────────────────────────────────── */
+.guide-section { margin-bottom: 24px; }
+.guide-section h2 { font-size: 15px; font-family: Arial, sans-serif; background: #1a1a2e; color: #fff; padding: 8px 12px; border-radius: 3px; margin-bottom: 10px; }
+.guide-section ul { padding-left: 20px; }
+.guide-section li { margin-bottom: 6px; font-size: 14px; }
+.guide-section p { font-size: 14px; margin-bottom: 6px; }
+
+/* ── Back to top ─────────────────────────────────────────────── */
+.back-top { text-align: right; margin-top: 30px; }
+.back-top a { font-size: 12px; color: #888; font-family: Arial, sans-serif; text-decoration: none; }
+.back-top a:hover { color: #333; }
+
+/* anchor offset for sticky-ish nav */
+.anchor { display: block; height: 1px; margin-top: -1px; }
